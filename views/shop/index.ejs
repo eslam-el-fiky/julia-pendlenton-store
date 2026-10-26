@@ -1,0 +1,18 @@
+<%- include('../partials/head', { pageTitle }) %>
+<%- include('../partials/header') %>
+<main>
+  <section class="hero">
+    <div class="hero-copy"><p class="eyebrow">THE ART OF GIVING</p><h1>A gift of<br><em>pure luxury.</em></h1><p>Thoughtfully chosen soaps. Beautifully presented gifts. Little moments that feel extraordinary.</p><a class="button button-gold" href="/shop">Explore the collection <span>↗</span></a><div class="hero-note">A thoughtful gift for every kind of moment.</div></div>
+    <div class="hero-image"><img src="/images/gift-box.svg" alt="Luxury soap gift set"><span class="image-stamp">MADE TO<br>DELIGHT</span></div>
+  </section>
+  <section class="trust-strip"><span>✦ Thoughtful gifting</span><span>✦ Beautiful packaging</span><span>✦ Delivered to your door</span></section>
+  <section class="section" id="collections"><div class="section-heading"><div><p class="eyebrow">FIND YOUR SOMETHING SPECIAL</p><h2>Discover our collections</h2></div><a class="text-link" href="/shop">View all products ↗</a></div>
+    <div class="collection-grid"><a class="collection-card collection-dark" href="/shop?category=Signature%20Soaps"><img src="/images/soap-rose.svg" alt=""><span><small>THE EVERYDAY RITUAL</small><strong>Signature soaps</strong><i>Explore collection ↗</i></span></a><a class="collection-card collection-olive" href="/shop?category=Botanical"><img src="/images/soap-olive.svg" alt=""><span><small>INSPIRED BY NATURE</small><strong>Botanical collection</strong><i>Explore collection ↗</i></span></a></div>
+  </section>
+  <section class="section section-soft"><div class="section-heading"><div><p class="eyebrow">LOVED FOR A REASON</p><h2>The signature collection</h2><p class="muted">Considered details. Beautiful scents. A little everyday indulgence.</p></div><a class="text-link" href="/shop">Shop all ↗</a></div>
+    <div class="product-grid"><% featured.forEach(product => { %><%- include('../partials/product-card', { product }) %><% }) %></div>
+  </section>
+  <section class="story-section" id="story"><div class="story-art"><img src="/images/soap-olive.svg" alt="Botanical soap"></div><div class="story-copy"><p class="eyebrow">THE JULIA PENDLENTON APPROACH</p><h2>Small rituals.<br><em>Meaningful moments.</em></h2><p>We believe a beautiful gift is more than what is inside the box. It is the thought, the details, and the moment someone opens it.</p><a class="button button-dark" href="/shop">Find your gift</a></div></section>
+  <section class="newsletter" id="contact"><p class="eyebrow">A NOTE FROM JULIA PENDLENTON</p><h2>Make room for a little luxury.</h2><p>Follow our latest collections and gifting inspiration.</p><a class="button button-outline" href="/shop">Explore the store</a></section>
+</main>
+<%- include('../partials/footer') %>

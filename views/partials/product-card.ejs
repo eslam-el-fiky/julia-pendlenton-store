@@ -1,0 +1,5 @@
+<article class="product-card">
+  <a class="product-image" href="/products/<%= product.slug %>"><img src="<%= product.image %>" alt="<%= product.title %>"><% if (product.featured) { %><span class="product-tag">JULIA EDIT</span><% } %></a>
+  <div class="product-info"><div><a class="product-title" href="/products/<%= product.slug %>"><%= product.title %></a><p><%= product.category %> · <%= product.weight %></p></div><strong><%= product.price.toLocaleString('en-US') %> KWD</strong></div>
+  <form action="/cart/add" method="POST"><input type="hidden" name="productId" value="<%= product._id %>"><input type="hidden" name="quantity" value="1"><button class="add-button" type="submit" <%= product.stock < 1 ? 'disabled' : '' %>><%= product.stock < 1 ? 'Sold out' : 'Add to bag +' %></button></form>
+</article>

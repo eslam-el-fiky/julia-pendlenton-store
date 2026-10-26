@@ -1,0 +1,12 @@
+<div class="announcement">A LITTLE LUXURY, BEAUTIFULLY WRAPPED · WELCOME TO JULIA PENDLENTON STORE</div>
+<header class="site-header">
+  <a class="brand" href="/">Julia Pendlenton<span>.</span><small>STORE</small></a>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+  <nav class="main-nav" id="main-nav">
+    <a href="/">Home</a><a href="/shop">Shop</a>
+  </nav>
+  <div class="header-actions">
+    <a class="bag-link" href="/cart">Bag <span><%= cartCount %></span></a>
+  </div>
+</header>
+<% if (flash) { %><div class="flash <%= flash.type %>"><%= flash.message %></div><% } %>

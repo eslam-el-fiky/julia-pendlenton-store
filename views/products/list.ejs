@@ -1,0 +1,6 @@
+<%- include('../partials/head', { pageTitle }) %><%- include('../partials/header') %>
+<main class="page-wrap">
+  <div class="page-intro"><p class="eyebrow">THE Julia Pendlenton Store COLLECTION</p><h1>Shop <em>beautifully.</em></h1><p>Discover signature soaps and thoughtful gifts for every occasion.</p></div>
+  <form class="filter-bar" action="/shop" method="GET"><input type="search" name="q" value="<%= search %>" placeholder="Search the collection..."><select name="category"><option value="">All collections</option><% categories.forEach(category => { %><option value="<%= category %>" <%= selectedCategory === category ? 'selected' : '' %>><%= category %></option><% }) %></select><button class="button button-dark" type="submit">Find products</button></form>
+  <% if (products.length) { %><div class="product-grid"><% products.forEach(product => { %><%- include('../partials/product-card', { product }) %><% }) %></div><% } else { %><div class="empty-state"><h2>No products found</h2><p>Try another search or browse the full collection.</p><a class="button button-dark" href="/shop">View all products</a></div><% } %>
+</main><%- include('../partials/footer') %>
